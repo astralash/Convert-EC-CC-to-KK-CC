@@ -9,7 +9,7 @@
 	
 	It will not convert pngs that is not a CC or already KK.
 	
-	The KKEx part is empty, so extra information may need to be mannually transplanted.
+	The KKEx part is through simply copying, so it's not sure all information is transplanted correctly.
 	
 # Update
 	2022-12-26 V1.1
