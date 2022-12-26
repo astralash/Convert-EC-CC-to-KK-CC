@@ -132,8 +132,11 @@ def Convert(ec, DstPath):
 	kk.Status["coordinateType"] = 4
 	kk.Status["backCoordinateType"] = 0
 	kk.Status["shoesType"] = 1
-
-	kk.KKEx = KKEx(data=" ".encode("utf-8"), version="3")
+	
+	if hasattr(ec, "KKEx"):
+		kk.KKEx = ec.KKEx
+	else:
+		kk.KKEx = KKEx(data=" ".encode("utf-8"), version="3")
 
 	kk.save(DstPath)
 
