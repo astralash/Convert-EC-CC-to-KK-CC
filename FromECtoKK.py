@@ -39,7 +39,15 @@ def Convert(ec, DstPath):
 	
 	kk.Custom["face"]["version"] = "0.0.2"
 	kk.Custom["face"]["pupilHeight"] *= 1.08
-	kk.Custom["face"]["hlUpY"] = (kk.Custom["face"]["hlUpY"] - 0.25) * 2
+	
+	
+	try:
+		kk.Custom["face"]["hlUpY"] = (kk.Custom["face"]["hlUpY"] - 0.25) * 2
+	except Exception:
+		kk.Custom["face"]["hlUpY"] = 0.5
+	
+	
+	
 	del kk.Custom["face"]["hlUpX"]
 	del kk.Custom["face"]["hlDownX"]
 	del kk.Custom["face"]["hlUpScale"]
